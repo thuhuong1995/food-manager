@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body style="display: flex" onload="renderListFood()">
+    <div id="test">
+      <form name="formFood" style="display: block; width: 300px">
+        <label>Food ID</label>
+        <input
+          class="food-input food-input--id"
+          type="text"
+          name="id"
+          id="foodID"
+        />
+
+        <label>Food Name</label>
+        <input class="food-input" type="text" name="name" id="foodName" />
+        <div id="name-messages"></div>
+        <label>Food cost</label>
+        <input class="food-input" type="text" name="cost" id="foodCost" />
+        <div id="cost-messages"></div>
+        <button onclick="add()" type="submit" id="btn-add">Add</button>
+        <button onclick="savebyID()" type="submit" class="hidden" id="btn-save">
+          Save
+        </button>
+      </form>
+    </div>
+    <div class="list-food" id="list-foods">
+      <table
+        id="list-food"
+        class="food-table"
+        style="width: 600px; border: 1px solid #cccccc; margin-left: 20px"
+      ></table>
+    </div>
+  </body>
+  <script src="test.js"></script>
+</html>
